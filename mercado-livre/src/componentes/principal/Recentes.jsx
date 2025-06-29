@@ -125,38 +125,35 @@ const PraVoce = () => {
       },
   ]
 
-    return (
-      <>
-      {/*Slide feito apenas pro mobile */}
-      <div className='md:hidden'>
-        <Swiper 
-          slidesPerView={2.3} // Ajustado para mostrar menos produtos de uma vez
+  return (
+    <>
+      {/* Slide feito apenas pro mobile */}
+      <div className="md:hidden">
+        <Swiper
+          slidesPerView={2.3}
           slideToClickedSlide={true}
           freeMode={true}
         >
           {produtosMobile.map((produto) => (
             <SwiperSlide key={produto.id} className="pb-[10px]">
-              <ProductCard 
-                {...produto} 
-                productSize="w-[140px] h-[260px]" 
-              />
+              <ProductCard {...produto} productSize="w-[140px] h-[260px]" />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      {/*Slide feito apenas pro desktop */}
-      <div className='hidden md:block bg-gradient-to-b from-[#FEF724] to-[#EBEBEB]'>
-        <div className='w-[1250px] ml-[435px] z-[10] relative'>
-          <Swiper 
+      {/* Slide feito apenas pro desktop */}
+      <div className="hidden md:block bg-gradient-to-b from-[#FEF724] to-[#EBEBEB]">
+        <div className="w-full max-w-[1250px] mx-auto z-[10] relative px-4">
+          <Swiper
             slidesPerView={6}
-            modules={[Navigation]} 
+            modules={[Navigation]}
             navigation={true}
             spaceBetween={10}
           >
             {produtosDesktop.map((produto) => (
               <SwiperSlide key={produto.id}>
-                <div className='flex justify-center items-center'>
+                <div className="flex justify-center items-center">
                   <ProductCard {...produto} />
                 </div>
               </SwiperSlide>
@@ -164,8 +161,8 @@ const PraVoce = () => {
           </Swiper>
         </div>
       </div>
-      </>
-    )
-}
+    </>
+  );
+};
 
 export default PraVoce;

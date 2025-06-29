@@ -1,7 +1,7 @@
 const Headerbaixo = () => {
   return (
     <div className="bg-[#FFF159] md:bg-[#FFE600]">
-      <div className="flex flex-wrap items-center md:ml-[445px] gap-4.5 p-2
+      <div className="flex flex-wrap items-center md:ml-[245px] gap-4.5 p-2
       ">
         <div className=" flex items-center gap-2 border-transparent p-1  border-[1px] 
          hover:border-[gray] rounded-md cursor-pointer transition-all duration-200 ">
