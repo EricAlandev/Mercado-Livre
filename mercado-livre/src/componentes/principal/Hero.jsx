@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const Hero = () => {
 
@@ -21,13 +22,37 @@ const Hero = () => {
 
     return(
      <>
-       <div className='bg-gradient-to-b from-[#FFF801] to-[#EBEBEB]'>
-         <Swiper slidesPerView={1.1}>
+       <div className='bg-gradient-to-b from-[#FFF801] to-[#EBEBEB]
+        md:bg-none md:bg-[#FFF801] '>
+         <Swiper slidesPerView={1.1}
+         modules={[Pagination, Navigation]}
+         pagination={{clickable : true}}
+         className='relative'
+        
+        
+         breakpoints={ {
+            768: {
+                slidesPerView: 1,
+            }
+         }}
+          >
             {data.map((item) => (
                 <SwiperSlide key={item.id}>
-                    <div className='flex w-[300px] h-[150px] ml-[27px] overflow-hidden rounded-[10px]'>
+                    <div className={`flex w-[300px] h-[150px] ml-[27px] overflow-hidden rounded-[10px]
+                    md:w-[1200px] md:h-[400px] md:ml-[430px]
+                    `}>
                         <img src={item.image} alt=""
-                        className='scale-[1.9]  object-contain pt-[22px]'
+                        className={`scale-[1.9] object-contain pt-[22px]
+                         md:scale-[1.35] 
+                         ${item.id === "1" ? "md:pt-[20px]" : 
+                         item.id === "2" ? " md:pt-[60px]" :
+                         item.id === "3" ? " md:pt-[60px] md:pl-[20px]" :
+                         item.id === "4" ? "md:pt-[80px] md:ml-[80px]" :
+                         item.id === "5" ? "md:pt-[70px]" :
+                         item.id === "6" ? " md:pt-[70px]" : ""}
+                         `}
+                         
+                        
                         />
                     </div>
                 </SwiperSlide>
@@ -35,7 +60,7 @@ const Hero = () => {
          </Swiper>
          
          
-         <div className='flex mt-4 ml-5.5 p-2 w-[310px] bg-[white] rounded-[4px] '>
+         <div className='flex mt-4 ml-5.5 p-2 w-[310px] bg-[white] rounded-[4px] md:hidden'>
             <img src="/Mercado-Livre/assets/raio.png" alt=""
             className='h-4.5 '
              />
@@ -45,10 +70,12 @@ const Hero = () => {
             </h2>
          </div>
         
+        {/*Slide inicial com as ofertas - Mercado  Pago, Ofertas Novas*/}
         <div className='flex items-center  overflow-hidden 
-         w-[360px] h-[100px] mt-[15px]
+         w-[360px] h-[100px] mt-[15px]  md:hidden
 
          '>
+            {/*Slider no mobile*/}
             <Swiper slidesPerView={4}>
                 {items.map((opcao) => (
                   <SwiperSlide key={opcao.id}>
