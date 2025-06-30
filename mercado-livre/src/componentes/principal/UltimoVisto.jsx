@@ -96,6 +96,32 @@ const UltimoVisto = () => {
   </div>
 </div>
 
+{/* Swiper - Últimos vistos */}
+<div className="hidden md:block w-full max-w-[1213px] rounded-[12px] bg-white mt-5 mx-auto shadow-sm">
+  <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">Inspirado no último visto</h2>
+  <div className="w-full px-4 pb-4">
+    <Swiper
+      slidesPerView={6}
+      spaceBetween={16}
+      modules={[Navigation]}
+      navigation={true}
+      className="py-4"
+    >
+      {ultimoVisto.map((produtos) => (
+        <SwiperSlide key={produtos.id}>
+          <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100">
+            <img src={produtos.image} alt={produtos.name} className="w-[60px] mb-2" />
+            <h2 className="text-lg font-semibold text-center">{produtos.name}</h2>
+            <h2 className="text-base text-gray-700">{produtos.price}</h2>
+            <h3 className="text-sm text-gray-500">{produtos.textoParcela}</h3>
+            <p className="text-xs text-[#00A650] text-center">{produtos.descricao}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+
 {/* Propagandas */}
 <div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-4">
   {/* Propaganda da esquerda */}
@@ -108,7 +134,7 @@ const UltimoVisto = () => {
       />
 
       <div className="text-white flex-1">
-        <h2 className="text-[8px]">MÊS DOS NAMORADOS</h2>
+        <h2 className="text-[7px]">MÊS DOS NAMORADOS</h2>
         <h2 className="text-[12px]">
           FRETE GRÁTIS <br />
           PARCELE EM 18X
