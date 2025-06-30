@@ -1,6 +1,7 @@
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation } from 'swiper/modules';
 import ProductCard from "../ProductCard";
+import { useCart } from "../context/CartContext";
 
 const UltimoVisto = () => {
   const ultimoVisto = [
@@ -40,6 +41,9 @@ const UltimoVisto = () => {
       descricao: "Frete gratis"
     },
   ];
+
+  const { addToCart } = useCart();
+
 
   return (
     <>
@@ -96,31 +100,47 @@ const UltimoVisto = () => {
   </div>
 </div>
 
-{/* Swiper - Últimos vistos */}
+{/* Swiper desktop */}
 <div className="hidden md:block w-full max-w-[1213px] rounded-[12px] bg-white mt-5 mx-auto shadow-sm">
-  <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">Inspirado no último visto</h2>
-  <div className="w-full px-4 pb-4">
-    <Swiper
-      slidesPerView={6}
-      spaceBetween={16}
-      modules={[Navigation]}
-      navigation={true}
-      className="py-4"
-    >
-      {ultimoVisto.map((produtos) => (
-        <SwiperSlide key={produtos.id}>
-          <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100">
-            <img src={produtos.image} alt={produtos.name} className="w-[60px] mb-2" />
-            <h2 className="text-lg font-semibold text-center">{produtos.name}</h2>
-            <h2 className="text-base text-gray-700">{produtos.price}</h2>
-            <h3 className="text-sm text-gray-500">{produtos.textoParcela}</h3>
-            <p className="text-xs text-[#00A650] text-center">{produtos.descricao}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</div>
+        <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">
+          Inspirado no último visto
+        </h2>
+        <div className="w-full px-4 pb-4">
+          <Swiper
+            slidesPerView={6}
+            spaceBetween={16}
+            modules={[Navigation]}
+            navigation={true}
+            className="py-4"
+          >
+            {ultimoVisto.map((produto) => (
+              <SwiperSlide key={produto.id}>
+                <div
+                  onClick={() => addToCart(produto)}
+                  className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100 cursor-pointer hover:shadow-lg transition"
+                  title="Clique para adicionar ao carrinho"
+                >
+                  <img
+                    src={produto.image}
+                    alt={produto.name}
+                    className="w-[60px] mb-2"
+                  />
+                  <h2 className="text-lg font-semibold text-center">
+                    {produto.name}
+                  </h2>
+                  <h2 className="text-base text-gray-700">{produto.price}</h2>
+                  <h3 className="text-sm text-gray-500">
+                    {produto.textoParcela}
+                  </h3>
+                  <p className="text-xs text-[#00A650] text-center">
+                    {produto.descricao}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
 
 {/* Propagandas */}
 <div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-4">
@@ -258,31 +278,48 @@ md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
   </div>
 </div>
 
-{/* Swiper - Últimos vistos */}
+
+{/* Swiper desktop */}
 <div className="hidden md:block w-full max-w-[1213px] rounded-[12px] bg-white mt-5 mx-auto shadow-sm">
-  <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">Inspirado no último visto</h2>
-  <div className="w-full px-4 pb-4">
-    <Swiper
-      slidesPerView={6}
-      spaceBetween={16}
-      modules={[Navigation]}
-      navigation={true}
-      className="py-4"
-    >
-      {ultimoVisto.map((produtos) => (
-        <SwiperSlide key={produtos.id}>
-          <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100">
-            <img src={produtos.image} alt={produtos.name} className="w-[60px] mb-2" />
-            <h2 className="text-lg font-semibold text-center">{produtos.name}</h2>
-            <h2 className="text-base text-gray-700">{produtos.price}</h2>
-            <h3 className="text-sm text-gray-500">{produtos.textoParcela}</h3>
-            <p className="text-xs text-[#00A650] text-center">{produtos.descricao}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</div>
+        <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">
+          Inspirado no último visto
+        </h2>
+        <div className="w-full px-4 pb-4">
+          <Swiper
+            slidesPerView={6}
+            spaceBetween={16}
+            modules={[Navigation]}
+            navigation={true}
+            className="py-4"
+          >
+            {ultimoVisto.map((produto) => (
+              <SwiperSlide key={produto.id}>
+                <div
+                  onClick={() => addToCart(produto)}
+                  className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100 cursor-pointer hover:shadow-lg transition"
+                  title="Clique para adicionar ao carrinho"
+                >
+                  <img
+                    src={produto.image}
+                    alt={produto.name}
+                    className="w-[60px] mb-2"
+                  />
+                  <h2 className="text-lg font-semibold text-center">
+                    {produto.name}
+                  </h2>
+                  <h2 className="text-base text-gray-700">{produto.price}</h2>
+                  <h3 className="text-sm text-gray-500">
+                    {produto.textoParcela}
+                  </h3>
+                  <p className="text-xs text-[#00A650] text-center">
+                    {produto.descricao}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
      
     </>
   );

@@ -1,6 +1,13 @@
+// src/componentes/header/Headerbaixo.jsx
+import { useState } from "react";
+import { useCart } from "../context/CartContext";
+
 const Headerbaixo = () => {
+  const { cartItems, removeFromCart } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
-    <div className="bg-[#FFF159] md:bg-[#FFE600]">
+    <div className="bg-[#FFF159] md:bg-[#FFE600] relative">
       <div className="w-full max-w-[1300px] mx-auto flex flex-wrap items-center gap-4.5 p-2">
         <div className="flex items-center gap-2 border-transparent p-1 border-[1px] hover:border-[gray] rounded-md cursor-pointer transition-all duration-200">
           <img
@@ -50,15 +57,51 @@ const Headerbaixo = () => {
             className="h-[20px]"
           />
 
-          <div className="relative">
+          {/* Ícone do carrinho com toggle */}
+          <div className="relative cursor-pointer" onClick={() => setIsCartOpen(!isCartOpen)}>
             <img
               src="/Mercado-Livre/assets/carrinho.webp"
               alt="Carrinho"
               className="h-5 mt-[5px]"
             />
             <h2 className="absolute left-[2.5px] top-[-8px] text-xs bg-white text-black rounded-full w-4 h-4 flex items-center justify-center">
-              1
+              {cartItems.length}
             </h2>
+
+            {/* Dropdown do carrinho */}
+            {isCartOpen && (
+              <div className="absolute right-0 top-[30px] bg-white shadow-lg rounded-md p-4 w-[300px] z-50">
+                <h2 className="text-[16px] font-bold mb-2">Seu carrinho:</h2>
+                {cartItems.length === 0 ? (
+                  <p className="text-sm text-gray-500">Nenhum item no carrinho.</p>
+                ) : (
+                  <ul className="space-y-2 max-h-[300px] overflow-y-auto">
+                    {cartItems.map((item) => (
+                      <li
+                        key={item.id}
+                        className="text-sm border-b pb-1 flex items-center gap-2 justify-between"
+                      >
+                        <div className="flex items-center gap-2">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-[40px] h-[40px] object-cover"
+                          />
+                          <span className="text-sm font-medium">{item.name}</span>
+                        </div>
+                        <button
+                          onClick={() => removeFromCart(item.id)}
+                          className="text-red-600 hover:text-red-800 text-sm font-semibold"
+                          aria-label={`Remover ${item.name} do carrinho`}
+                        >
+                          Remover
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
