@@ -45,52 +45,52 @@ const UltimoVisto = () => {
     <>
       {/* Versão para Mobile */}
 <div className="bg-white m-4 pb-5 rounded-[8px] md:hidden">
-  <h2 className="ml-8 pt-4 pb-1 pr-4 font-Inter font-bold border-b-2 border-[#F1F1F1] w-3/5">
+  <h2 className="ml-4 pt-4 pb-1 pr-4 font-Inter font-bold border-b-2 border-[#F1F1F1] w-3/5">
     Inspirado no último visto
   </h2>
 
-  <div className="grid grid-cols-2 grid-rows-2 gap-4 w-[200px] ml-5">
-    <div>
+  <div className="grid grid-cols-2 gap-4 px-4 py-4">
+    <div className="flex justify-center">
       <ProductCard
         image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
         name="Essencial Ato"
-        priceDiscount="159.69"
-        price="119.99"
-        imageSize="w-[90px] h-auto"
-        productSize="w-[140px] border-2 border-[#F1F1F1]"
+        priceDiscount="R$ 159.69"
+        price="R$ 119.99"
+        imageSize="w-[90px] h-auto ml-[20px]"
+        productSize="w-full max-w-[140px] border-2 border-[#F1F1F1]"
       />
     </div>
 
-    <div>
+    <div className="flex justify-center">
       <ProductCard
         image="/Mercado-Livre/assets/ultimo_visto/EssencialPalo.webp"
         name="Essencial Palo"
-        priceDiscount="209.99"
-        price="199.98"
-        imageSize="w-[90px] h-[170px]"
-        productSize="w-[140px] border-2 border-[#F1F1F1]"
+        priceDiscount="R$ 209.99"
+        price="R$ 199.98"
+        imageSize="w-[90px] h-[170px] ml-[20px]"
+        productSize="w-full max-w-[140px] border-2 border-[#F1F1F1]"
       />
     </div>
 
-    <div>
+    <div className="flex justify-center">
       <ProductCard
-        image="/Mercado-Livre/assets/ultimo_visto/HomemEvolutio.webp"
+        image="/Mercado-Livre/assets/ultimo_visto/EssencialPalo.webp"
         name="Essencial Ato"
-        priceDiscount="125.99"
-        price="119.99"
-        imageSize="w-[90px] h-auto mt-5"
-        productSize="w-[140px] h-[260px] border-2 border-[#F1F1F1]"
+        priceDiscount="R$ 125.99"
+        price="R$ 119.99"
+        imageSize="w-[90px] h-auto  ml-[20px]"
+        productSize="w-full max-w-[140px] h-[p260px] border-2 border-[#F1F1F1]"
       />
     </div>
 
-    <div>
+    <div className="flex justify-center">
       <ProductCard
         image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
         name="Essencial Ato"
-        priceDiscount="299.99"
-        price="219.99"
-        imageSize="w-[90px] h-auto"
-        productSize="w-[140px] border-2 border-[#F1F1F1]"
+        priceDiscount="R$ 299.99"
+        price="R$ 219.99"
+        imageSize="w-[90px] h-auto ml-[20px]"
+        productSize="w-full max-w-[140px] border-2 border-[#F1F1F1]"
       />
     </div>
   </div>
@@ -183,8 +183,8 @@ md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
       Aproveite estes benefícios exclusivos:
     </h2>
 
-    <div className="md:flex md:flex-wrap md:gap-x-12 md:gap-y-4 md:pb-[15px]">
-      <div className="flex items-center gap-2">
+    <div className="md:flex md:items-center md:justify-between md:gap-4 md:pb-[15px] md:flex-nowrap md:overflow-x-auto md:scrollbar-hide">
+      <div className="flex items-center gap-2 shrink-0">
         <img
           src="/Mercado-Livre/assets/Meli+/Disney+.png"
           alt="Disney+"
@@ -193,7 +193,7 @@ md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
         <h2 className="text-[14px]">Disney+ incluído</h2>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 shrink-0">
         <img
           src="/Mercado-Livre/assets/Meli+/CashBack.png"
           alt="Cashback"
@@ -202,7 +202,7 @@ md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
         <h2 className="text-[14px]">CashBack em compras e pagamentos</h2>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 shrink-0">
         <img
           src="/Mercado-Livre/assets/Meli+/Cofrinhos.png"
           alt="Cofrinhos"
@@ -213,7 +213,7 @@ md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
         </h2>
       </div>
 
-      <div className="flex items-center gap-2 pb-[10px]">
+      <div className="flex items-center gap-2 pb-[10px] shrink-0">
         <img
           src="/Mercado-Livre/assets/Meli+/Cartao.png"
           alt="Cartão"
