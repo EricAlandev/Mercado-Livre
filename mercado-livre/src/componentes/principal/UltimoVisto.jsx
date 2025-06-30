@@ -123,7 +123,7 @@ const UltimoVisto = () => {
       </div>
 
       {/* Propagandas */}
-<div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-[15px]">
+<div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-[15px] md:ml-[-400px]">
   {/* Propaganda da esquerda */}
   <div className="hidden md:flex md:w-[48%] max-w-[620px] h-[110px] bg-black rounded-[8px] overflow-hidden">
     <div className="flex flex-1 p-4 gap-4">
