@@ -96,34 +96,8 @@ const UltimoVisto = () => {
   </div>
 </div>
 
-
-      {/* Versão para Desktop */}
-      <div className="hidden md:block w-full max-w-[1213.5px] rounded-[12px] bg-white mt-5 mx-auto">
-        <h2 className="pt-4 ml-8 text-[18px] font-medium font-Inter mb-4">Inspirado no último visto</h2>
-        <div className="w-full px-4">
-          <Swiper
-            slidesPerView={6}
-            spaceBetween={16}
-            modules={[Navigation]}
-            navigation={true}
-          >
-            {ultimoVisto.map((produtos) => (
-              <SwiperSlide key={produtos.id}>
-                <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start">
-                  <img src={produtos.image} alt="" className="w-[60px] mb-2" />
-                  <h2 className="text-[18px] font-semibold text-center">{produtos.name}</h2>
-                  <h2 className="text-[16px] text-gray-700">{produtos.price}</h2>
-                  <h3 className="text-[14px] text-gray-500">{produtos.textoParcela}</h3>
-                  <p className="text-[12px] text-[#00A650] text-center">{produtos.descricao}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
-
-      {/* Propagandas */}
-<div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-[15px] md:ml-[-800px]">
+{/* Propagandas */}
+<div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-4">
   {/* Propaganda da esquerda */}
   <div className="hidden md:flex md:w-[48%] max-w-[620px] h-[110px] bg-black rounded-[8px] overflow-hidden">
     <div className="flex flex-1 p-4 gap-4">
@@ -187,33 +161,33 @@ const UltimoVisto = () => {
 </div>
 
 {/* Tela do Meli+ */}
-<div className="w-[345px] mx-auto bg-[#FFFFFF] rounded-[8px] overflow-hidden
-md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
+<div className="w-[345px] mx-auto bg-white rounded-[8px] overflow-hidden shadow-sm
+md:max-w-[1212px] md:w-[94%] md:mt-[40px]">
   <div className="bg-gradient-to-r from-[#5F228D] to-[#A21291] flex items-center pt-[10px] pb-[10px] relative">
     <img
       src="/Mercado-Livre/assets/Meli+/Meli+Anuncio.png"
       alt=""
-      className="h-[35px] w-[100px] ml-[30px] border-r-[2px] border-[white] pr-[9px] object-cover"
+      className="h-[35px] w-[100px] ml-[30px] border-r-[2px] border-white pr-[9px] object-contain"
     />
-    <h2 className="pl-[12px] text-[white] font-[Inter]">
+    <h2 className="pl-[12px] text-white font-[Inter]">
       Assine a partir de <br /> R$ 24.90/mês
     </h2>
 
-    <h2 className="hidden md:block absolute right-[30px] md:p-1.5 text-[white]
-    bg-[#B442A7] rounded-[4px] hover:bg-[#9D3A8F] cursor-pointer">Assinar o Meli+</h2>
+    <h2 className="hidden md:block absolute right-[30px] p-1.5 text-white
+    bg-[#B442A7] rounded-[4px] hover:bg-[#9D3A8F] cursor-pointer transition-colors">Assinar o Meli+</h2>
   </div>
 
   {/* Benefícios */}
-  <div className="pl-7 flex flex-col gap-2.5 border-b-[1px] border-[#F1F1F1] md:flex">
-    <h2 className="mt-[17px] font-[Inter] font-[600] text-[15px] md:text-[21.5px]">
-      Aproveite estes benefícios exlusivos:
+  <div className="pl-7 pr-4 flex flex-col gap-2.5 border-b border-gray-100 md:flex">
+    <h2 className="mt-[17px] font-[Inter] font-semibold text-[15px] md:text-[21.5px]">
+      Aproveite estes benefícios exclusivos:
     </h2>
 
     <div className="md:flex md:flex-wrap md:gap-x-12 md:gap-y-4 md:pb-[15px]">
       <div className="flex items-center gap-2">
         <img
           src="/Mercado-Livre/assets/Meli+/Disney+.png"
-          alt=""
+          alt="Disney+"
           className="w-[50px] rounded-2xl"
         />
         <h2 className="text-[14px]">Disney+ incluído</h2>
@@ -222,7 +196,7 @@ md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
       <div className="flex items-center gap-2">
         <img
           src="/Mercado-Livre/assets/Meli+/CashBack.png"
-          alt=""
+          alt="Cashback"
           className="w-[50px] rounded-2xl"
         />
         <h2 className="text-[14px]">CashBack em compras e pagamentos</h2>
@@ -231,7 +205,7 @@ md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
       <div className="flex items-center gap-2">
         <img
           src="/Mercado-Livre/assets/Meli+/Cofrinhos.png"
-          alt=""
+          alt="Cofrinhos"
           className="w-[50px] rounded-2xl"
         />
         <h2 className="text-[14px]">
@@ -242,7 +216,7 @@ md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
       <div className="flex items-center gap-2 pb-[10px]">
         <img
           src="/Mercado-Livre/assets/Meli+/Cartao.png"
-          alt=""
+          alt="Cartão"
           className="w-[50px] rounded-2xl"
         />
         <h2 className="text-[14px]">Até 3 parcelas extras sem juros</h2>
@@ -251,45 +225,39 @@ md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
   </div>
 
   <div className="flex pt-[8px] pl-7 pb-2.5 md:hidden">
-    <h2 className="text-[#3483F9] font-[Inter] font-[500]">
+    <h2 className="text-[#3483FA] font-[Inter] font-medium">
       Assinar o Meli+{" "}
     </h2>
-    <p className="ml-[180px] text-[#3483F9]"> ˃ </p>
+    <p className="ml-[180px] text-[#3483FA]"> ˃ </p>
   </div>
 </div>
 
-  <div className="flex pt-[8px] pl-7 pb-2.5 md:hidden">
-    <h2 className="text-[#3483F9] font-[Inter] font-[500]">
-      Assinar o Meli+{" "}
-    </h2>
-    <p className="ml-[180px] text-[#3483F9]"> ˃ </p>
+{/* Swiper - Últimos vistos */}
+<div className="hidden md:block w-full max-w-[1213px] rounded-[12px] bg-white mt-5 mx-auto shadow-sm">
+  <h2 className="pt-4 ml-8 text-lg font-medium font-Inter">Inspirado no último visto</h2>
+  <div className="w-full px-4 pb-4">
+    <Swiper
+      slidesPerView={6}
+      spaceBetween={16}
+      modules={[Navigation]}
+      navigation={true}
+      className="py-4"
+    >
+      {ultimoVisto.map((produtos) => (
+        <SwiperSlide key={produtos.id}>
+          <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start border border-gray-100">
+            <img src={produtos.image} alt={produtos.name} className="w-[60px] mb-2" />
+            <h2 className="text-lg font-semibold text-center">{produtos.name}</h2>
+            <h2 className="text-base text-gray-700">{produtos.price}</h2>
+            <h3 className="text-sm text-gray-500">{produtos.textoParcela}</h3>
+            <p className="text-xs text-[#00A650] text-center">{produtos.descricao}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   </div>
-
-
-{/* Versão para Desktop */}
-<div className="hidden md:block w-full max-w-[1213.5px] rounded-[12px] bg-white mt-5 mx-auto">
-        <h2 className="pt-4 ml-8 text-[18px] font-medium font-Inter mb-4">Inspirado no último visto</h2>
-        <div className="w-full px-4">
-          <Swiper
-            slidesPerView={6}
-            spaceBetween={16}
-            modules={[Navigation]}
-            navigation={true}
-          >
-            {ultimoVisto.map((produtos) => (
-              <SwiperSlide key={produtos.id}>
-                <div className="w-[200px] h-[300px] bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-start">
-                  <img src={produtos.image} alt="" className="w-[60px] mb-2" />
-                  <h2 className="text-[18px] font-semibold text-center">{produtos.name}</h2>
-                  <h2 className="text-[16px] text-gray-700">{produtos.price}</h2>
-                  <h3 className="text-[14px] text-gray-500">{produtos.textoParcela}</h3>
-                  <p className="text-[12px] text-[#00A650] text-center">{produtos.descricao}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
+</div>
+     
     </>
   );
 };
