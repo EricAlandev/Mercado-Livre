@@ -122,18 +122,18 @@ const UltimoVisto = () => {
         </div>
       </div>
 
-      {/*Propagandas */}
-<div className="flex gap-4 md:mt-[40px]">
+      {/* Propagandas */}
+<div className="flex flex-col md:flex-row md:justify-center md:gap-4 md:mt-[40px] md:px-[15px]">
   {/* Propaganda da esquerda */}
-  <div className="hidden md:flex md:max-w-[620px] md:h-[110px] md:ml-[440px] md:bg-black md:rounded-[8px]">
-    <div className="flex p-4 gap-4">
+  <div className="hidden md:flex md:w-[48%] max-w-[620px] h-[110px] bg-black rounded-[8px] overflow-hidden">
+    <div className="flex flex-1 p-4 gap-4">
       <img
         src="/Mercado-Livre/assets/Propaganda/Samsung.webp"
         alt=""
-        className="h-[40px] mt-[20px] ml-[40px]"
+        className="h-[40px] mt-[20px] ml-[20px] md:ml-[40px]"
       />
 
-      <div className="text-white">
+      <div className="text-white flex-1">
         <h2 className="text-[8px]">MÊS DOS NAMORADOS</h2>
         <h2 className="text-[12px]">
           FRETE GRÁTIS <br />
@@ -147,30 +147,30 @@ const UltimoVisto = () => {
       <img
         src="/Mercado-Livre/assets/Propaganda/windows11Direita.webp"
         alt=""
-        className="ml-[22px] w-[180px] h-[110px]"
+        className="w-[180px] h-[110px] object-cover"
       />
       <img
         src="/Mercado-Livre/assets/Propaganda/InteligenciaAbsurda.webp"
         alt=""
-        className="w-[190px] h-[110px]"
+        className="w-[190px] h-[110px] object-cover"
       />
     </div>
   </div>
 
   {/* Propaganda da direita */}
-  <div className="hidden md:flex md:w-[620px] md:h-[110px]  md:bg-black md:rounded-[8px]">
-    <div className="flex p-4 gap-4">
+  <div className="hidden md:flex md:w-[48%] max-w-[620px] h-[110px] bg-black rounded-[8px] overflow-hidden">
+    <div className="flex flex-1 p-4 gap-4">
       <img
         src="/Mercado-Livre/assets/Propaganda/windos11.webp"
         alt=""
-        className="h-[55px] mt-[15px] ml-[40px]"
+        className="h-[55px] mt-[15px] ml-[20px] md:ml-[40px]"
       />
 
-      <div className="text-white">
-        <h2 className="mt-[5px] text-[10px] font-[Inter]" >Novo </h2>
+      <div className="text-white flex-1">
+        <h2 className="mt-[5px] text-[10px] font-[Inter]">Novo </h2>
         <h2 className="mt-[5px] text-[10px]">
           <span className="">Windows 11</span> <br />
-           <span>Parcele em 18x</span>
+          <span>Parcele em 18x</span>
         </h2>
         <p className="mt-[8px] font-[Inter] text-[12px]">Aproveite</p>
       </div>
@@ -180,105 +180,101 @@ const UltimoVisto = () => {
       <img
         src="/Mercado-Livre/assets/Propaganda/celular.webp"
         alt=""
-        className="ml-[162px] w-[230px] h-[110px] rounded-[6.5px]"
+        className="w-[230px] h-[110px] object-cover rounded-r-[6.5px]"
       />
-    
     </div>
   </div>
 </div>
 
+{/* Tela do Meli+ */}
+<div className="w-[345px] mx-auto bg-[#FFFFFF] rounded-[8px] overflow-hidden
+md:max-w-[1212px] md:w-[90%] md:mt-[40px] md:mx-auto">
+  <div className="bg-gradient-to-r from-[#5F228D] to-[#A21291] flex items-center pt-[10px] pb-[10px] relative">
+    <img
+      src="/Mercado-Livre/assets/Meli+/Meli+Anuncio.png"
+      alt=""
+      className="h-[35px] w-[100px] ml-[30px] border-r-[2px] border-[white] pr-[9px] object-cover"
+    />
+    <h2 className="pl-[12px] text-[white] font-[Inter]">
+      Assine a partir de <br /> R$ 24.90/mês
+    </h2>
 
-      {/* Tela do Meli+ */}
-      <div className="w-[345px] ml-[15px] bg-[#FFFFFF] rounded-[8px] overflow-hidden
-      md:w-[1255px] md:mt-[40px] md:ml-[440px]
-      ">
-        <div
-          className="bg-gradient-to-r from-[#5F228D] to-[#A21291] 
-                flex items-center pt-[10px] pb-[10px]"
-        >
-          <img
-            src="/Mercado-Livre/assets/Meli+/Meli+Anuncio.png"
-            alt=""
-            className="h-[35px] w-[35x] ml-[30px] border-r-[2px] border-[white] pr-[9px] object-cover"
-          />
-          <h2 className="pl-[12px] text-[white] font-[Inter]">
-            Assine a partir de <br /> R$ 24.90/mês
-          </h2>
+    <h2 className="hidden md:block absolute right-[30px] md:p-1.5 text-[white]
+    bg-[#B442A7] rounded-[4px] hover:bg-[#9D3A8F] cursor-pointer">Assinar o Meli+</h2>
+  </div>
 
-          <h2 className="hidden md:block ml-[840px] md:p-1.5 text-[white]
-           bg-[#B442A7] rounded-[4px]">Assinar o Meli+</h2>
-        </div>
+  {/* Benefícios */}
+  <div className="pl-7 flex flex-col gap-2.5 border-b-[1px] border-[#F1F1F1] md:flex">
+    <h2 className="mt-[17px] font-[Inter] font-[600] text-[15px] md:text-[21.5px]">
+      Aproveite estes benefícios exlusivos:
+    </h2>
 
-        {/* Código feito para dizer os benefícios do Meli+ */}
-        <div className="pl-7 flex flex-col gap-2.5 border-b-[1px] border-[#F1F1F1]
-        md:flex 
-        ">
-            <h2 className="mt-[17px] font-[Inter font-[600] text-[15px]
-            md:text-[21.5px]
-            ">
-              Aproveite estes benefícios exlusivos:
-            </h2>
-
-
-            {/*Coluna feita para Desktop - deixar os benefícios in row. */}
-            <div className="md:flex md:gap-6">
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/Mercado-Livre/assets/Meli+/Disney+.png"
-                    alt=""
-                    className="w-[50px] rounded-2xl"
-                  />
-                  <h2 className="text-[14px]">Disney+ incluído</h2>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/Mercado-Livre/assets/Meli+/CashBack.png"
-                    alt=""
-                    className="w-[50px] rounded-2xl"
-                  />
-                  <h2 className="text-[14px]">CashBack em compras e pagamentos</h2>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/Mercado-Livre/assets/Meli+/Cofrinhos.png"
-                    alt=""
-                    className="w-[50px] rounded-2xl"
-                  />
-                  <h2 className="text-[14px]">
-                    Cofrinhos que rendem 120% do CDI no Mercado Pago
-                  </h2>
-                </div>
-
-                <div className="flex items-center gap-2 pb-[10px]">
-                  <img
-                    src="/Mercado-Livre/assets/Meli+/Cartao.png"
-                    alt=""
-                    className="w-[50px] rounded-2xl"
-                  />
-                  <h2 className="text-[14px]">Até 3 parcelas extras sem juros</h2>
-                </div>
-              </div>
-            </div>
-
-          <div className="flex pt-[8px] pl-7 pb-2.5 md:hidden">
-            <h2 className="text-[#3483F9] font-[Inter] font-[500]">
-              Assinar o Meli+{" "}
-            </h2>
-            <p className="ml-[180px] text-[#3483F9]"> ˃ </p>
-          </div>
+    <div className="md:flex md:flex-wrap md:gap-x-12 md:gap-y-4 md:pb-[15px]">
+      <div className="flex items-center gap-2">
+        <img
+          src="/Mercado-Livre/assets/Meli+/Disney+.png"
+          alt=""
+          className="w-[50px] rounded-2xl"
+        />
+        <h2 className="text-[14px]">Disney+ incluído</h2>
       </div>
 
+      <div className="flex items-center gap-2">
+        <img
+          src="/Mercado-Livre/assets/Meli+/CashBack.png"
+          alt=""
+          className="w-[50px] rounded-2xl"
+        />
+        <h2 className="text-[14px]">CashBack em compras e pagamentos</h2>
+      </div>
 
-      <div className="hidden md:block md:w-[1246px] md:rounded-[12px] md:bg-[white] 
-      mt-[20px] md:ml-[440px]">
-        <h2 className="pt-[15px] ml-[30px] text-[18px] font-[500] font-[Inter]">Inspirado no último visto</h2>
-        <div className="w-[1200px] mx-auto"> {/* ⬅️ Essa é a div que engloba tudo */}
-          <Swiper slidesPerView={6} spaceBetween={16}
-          modules={[Navigation]} 
-          navigation={true}
-          
+      <div className="flex items-center gap-2">
+        <img
+          src="/Mercado-Livre/assets/Meli+/Cofrinhos.png"
+          alt=""
+          className="w-[50px] rounded-2xl"
+        />
+        <h2 className="text-[14px]">
+          Cofrinhos que rendem 120% do CDI no Mercado Pago
+        </h2>
+      </div>
+
+      <div className="flex items-center gap-2 pb-[10px]">
+        <img
+          src="/Mercado-Livre/assets/Meli+/Cartao.png"
+          alt=""
+          className="w-[50px] rounded-2xl"
+        />
+        <h2 className="text-[14px]">Até 3 parcelas extras sem juros</h2>
+      </div>
+    </div>
+  </div>
+
+  <div className="flex pt-[8px] pl-7 pb-2.5 md:hidden">
+    <h2 className="text-[#3483F9] font-[Inter] font-[500]">
+      Assinar o Meli+{" "}
+    </h2>
+    <p className="ml-[180px] text-[#3483F9]"> ˃ </p>
+  </div>
+</div>
+
+  <div className="flex pt-[8px] pl-7 pb-2.5 md:hidden">
+    <h2 className="text-[#3483F9] font-[Inter] font-[500]">
+      Assinar o Meli+{" "}
+    </h2>
+    <p className="ml-[180px] text-[#3483F9]"> ˃ </p>
+  </div>
+
+
+{/* Versão para Desktop */}
+<div className="hidden md:block w-full max-w-[1213.5px] rounded-[12px] bg-white mt-5 mx-auto">
+        <h2 className="pt-4 ml-8 text-[18px] font-medium font-Inter mb-4">Inspirado no último visto</h2>
+        <div className="w-full px-4">
+          <Swiper
+            slidesPerView={6}
+            spaceBetween={16}
+            modules={[Navigation]}
+            navigation={true}
           >
             {ultimoVisto.map((produtos) => (
               <SwiperSlide key={produtos.id}>
@@ -293,7 +289,7 @@ const UltimoVisto = () => {
             ))}
           </Swiper>
         </div>
-    </div>
+      </div>
     </>
   );
 };
