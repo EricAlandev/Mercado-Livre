@@ -98,7 +98,7 @@ const UltimoVisto = () => {
 
 
       {/* Versão para Desktop */}
-      <div className="hidden md:block w-full max-w-[1246px] rounded-[12px] bg-white mt-5 mx-auto">
+      <div className="hidden md:block w-full max-w-[1213.5px] rounded-[12px] bg-white mt-5 mx-auto">
         <h2 className="pt-4 ml-8 text-[18px] font-medium font-Inter mb-4">Inspirado no último visto</h2>
         <div className="w-full px-4">
           <Swiper
@@ -125,7 +125,7 @@ const UltimoVisto = () => {
       {/*Propagandas */}
 <div className="flex gap-4 md:mt-[40px]">
   {/* Propaganda da esquerda */}
-  <div className="hidden md:flex md:w-[620px] md:h-[110px] md:ml-[440px] md:bg-black md:rounded-[8px]">
+  <div className="hidden md:flex md:max-w-[620px] md:h-[110px] md:ml-[440px] md:bg-black md:rounded-[8px]">
     <div className="flex p-4 gap-4">
       <img
         src="/Mercado-Livre/assets/Propaganda/Samsung.webp"
@@ -180,7 +180,7 @@ const UltimoVisto = () => {
       <img
         src="/Mercado-Livre/assets/Propaganda/celular.webp"
         alt=""
-        className="ml-[162px] w-[230px] h-[110px]"
+        className="ml-[162px] w-[230px] h-[110px] rounded-[6.5px]"
       />
     
     </div>
