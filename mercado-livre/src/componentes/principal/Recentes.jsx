@@ -144,7 +144,7 @@ const PraVoce = () => {
 
       {/* Slide feito apenas pro desktop */}
       <div className="hidden md:block bg-gradient-to-b from-[#FEF724] to-[#EBEBEB]">
-        <div className="w-full max-w-[1250px] mx-auto z-[10] relative px-4">
+        <div className=" max-w-[1250px] mx-auto z-[10] relative px-4">
           <Swiper
             slidesPerView={6}
             modules={[Navigation]}

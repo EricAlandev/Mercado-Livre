@@ -32,7 +32,7 @@ const HeaderCima = () => {
               <img
                 src="/Mercado-Livre/assets/LogoMercadoLIVRE.webp"
                 alt=""
-                className="hidden md:block md:w-[150px] "
+                className="hidden md:block md:w-[150px] md:mr-[10px] "
               />
         </div>
 
@@ -64,7 +64,7 @@ const HeaderCima = () => {
               className={`bg-[white] pt-2.5 pl-3 pb-2.5 ml-[15px] mr-[30px]
                 focus:outline-none focus:ring-2 focus:ring-[black] rounded-[4px]
                 duration-300 ease-out
-                w-[600px] text-[16px]
+                w-[670px] text-[16px]
               `}
             />
           </div>
@@ -76,7 +76,7 @@ const HeaderCima = () => {
                 src="/Mercado-Livre/assets/Search.png"
                 alt=""
                 className="h-4 absolute left-[23px] top-[10px] 
-                md:absolute md:left-[565px] md:top-[14px] md:border-l-[2px] md:border-[#EBEBEB] md:pl-[8px] md:h-[16px]
+                md:absolute md:left-[640px] md:top-[14px] md:border-l-[2px] md:border-[#EBEBEB] md:pl-[8px] md:h-[16px]
                 "
               />
             </button>

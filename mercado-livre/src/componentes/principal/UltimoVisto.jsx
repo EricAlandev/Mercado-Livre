@@ -44,57 +44,58 @@ const UltimoVisto = () => {
   return (
     <>
       {/* Versão para Mobile */}
-      <div className="bg-white m-4 pb-5 rounded-[8px] md:hidden">
-        <h2 className="ml-8 pt-4 pb-1 pr-4 font-Inter font-bold border-b-2 border-[#F1F1F1] w-3/5">
-          Inspirado no último visto
-        </h2>
+<div className="bg-white m-4 pb-5 rounded-[8px] md:hidden">
+  <h2 className="ml-8 pt-4 pb-1 pr-4 font-Inter font-bold border-b-2 border-[#F1F1F1] w-3/5">
+    Inspirado no último visto
+  </h2>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-[200px] ml-5">
-          <div>
-            <ProductCard
-              image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
-              name="Essencial Ato"
-              priceDiscount="159.69"
-              price="119.99"
-              imageSize="w-[90px] h-auto ml-5"
-              productSize="w-[140px] border-2 border-[#F1F1F1]"
-            />
-          </div>
+  <div className="grid grid-cols-2 grid-rows-2 gap-4 w-[200px] ml-5">
+    <div>
+      <ProductCard
+        image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
+        name="Essencial Ato"
+        priceDiscount="159.69"
+        price="119.99"
+        imageSize="w-[90px] h-auto"
+        productSize="w-[140px] border-2 border-[#F1F1F1]"
+      />
+    </div>
 
-          <div>
-            <ProductCard
-              image="/Mercado-Livre/assets/ultimo_visto/EssencialPalo.webp"
-              name="Essencial Palo"
-              priceDiscount="209.99"
-              price="199.98"
-              imageSize="w-[90px] h-[170px] ml-5"
-              productSize="w-[140px] border-2 border-[#F1F1F1] ml-15"
-            />
-          </div>
+    <div>
+      <ProductCard
+        image="/Mercado-Livre/assets/ultimo_visto/EssencialPalo.webp"
+        name="Essencial Palo"
+        priceDiscount="209.99"
+        price="199.98"
+        imageSize="w-[90px] h-[170px]"
+        productSize="w-[140px] border-2 border-[#F1F1F1]"
+      />
+    </div>
 
-          <div>
-            <ProductCard
-              image="/Mercado-Livre/assets/ultimo_visto/HomemEvolutio.webp"
-              name="Essencial Ato"
-              priceDiscount="125.99"
-              price="119.99"
-              imageSize="w-[90px] h-auto mt-5 ml-5"
-              productSize="w-[140px] h-[260px] border-2 border-[#F1F1F1]"
-            />
-          </div>
+    <div>
+      <ProductCard
+        image="/Mercado-Livre/assets/ultimo_visto/HomemEvolutio.webp"
+        name="Essencial Ato"
+        priceDiscount="125.99"
+        price="119.99"
+        imageSize="w-[90px] h-auto mt-5"
+        productSize="w-[140px] h-[260px] border-2 border-[#F1F1F1]"
+      />
+    </div>
 
-          <div>
-            <ProductCard
-              image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
-              name="Essencial Ato"
-              priceDiscount="299.99"
-              price="219.99"
-              imageSize="w-[90px] h-auto ml-5"
-              productSize="w-[140px] border-2 border-[#F1F1F1] ml-15"
-            />
-          </div>
-        </div>
-      </div>
+    <div>
+      <ProductCard
+        image="/Mercado-Livre/assets/ultimo_visto/EssencialAto.webp"
+        name="Essencial Ato"
+        priceDiscount="299.99"
+        price="219.99"
+        imageSize="w-[90px] h-auto"
+        productSize="w-[140px] border-2 border-[#F1F1F1]"
+      />
+    </div>
+  </div>
+</div>
+
 
       {/* Versão para Desktop */}
       <div className="hidden md:block w-full max-w-[1246px] rounded-[12px] bg-white mt-5 mx-auto">
